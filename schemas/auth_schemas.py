@@ -1,11 +1,12 @@
 from pydantic import BaseModel, EmailStr
+from typing import Optional
 
 
 class RegisterRequest(BaseModel):
     full_name: str
     email: EmailStr
     password: str
-    phone: str | None = None
+    phone: Optional[str] = None
 
 
 class LoginRequest(BaseModel):
